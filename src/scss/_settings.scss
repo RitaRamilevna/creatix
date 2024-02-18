@@ -1,0 +1,126 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  height: 100%;
+
+  font-family: var(--font-family, sans-serif);
+
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+
+  font-size: 16px;
+}
+
+.site-container {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.is-hidden {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.input-reset {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
